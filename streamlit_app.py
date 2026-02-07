@@ -20,14 +20,13 @@ def install_ultralytics():
         except:
             raise Exception(" Installation failed! Please run manually: pip install ultralytics")
 
-# Run installation (only needed first time - comment out later)
+# Run installation 
 install_ultralytics()
 
-# Step 4: Configure project path
 PROJECT_PATH = r"C:\Users\lenovo\jupyter"
 os.chdir(PROJECT_PATH)
 
-# Step 5: Generate YOLO detection application code
+
 streamlit_code = '''
 import streamlit as st
 import cv2
@@ -136,14 +135,10 @@ webbrowser.open_new("http://localhost:8502")
 
 # Final status message
 print("="*60)
-print("🚀 YOLO Mask Detection launched successfully!")
-print("🔗 Access URL: http://localhost:8502")
-print("✅ Issues resolved:")
-print("  1. Auto-installs ultralytics dependencies")
-print("  2. All imports completed (no ModuleNotFoundError)")
-print("  3. New port + new file (no cache issues)")
-print("🛑 Stop command: streamlit_process.terminate()")
+print("YOLO11 Mask Detection System Started Successfully!")
+print("🌐 Access the app via your browser (default: http://localhost:8502)")
+print("💡 To stop the app: press Ctrl+C in the terminal")
 print("="*60)
 
-# Make process accessible globally for termination
+
 globals()['streamlit_process'] = streamlit_process
