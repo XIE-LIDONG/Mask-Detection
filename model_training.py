@@ -2,7 +2,6 @@ import subprocess
 import sys
 
 def install_required_packages():
-    """Install missing dependencies automatically"""
     required_packages = [
         "ultralytics",  # Core YOLO library for model training
         "wandb",        # Training tracking tool 
@@ -50,7 +49,6 @@ def normalize_bounding_box(bbox, img_w, img_h):
     return [x_center, y_center, bbox_width, bbox_height]
 
 def setup_directory_structure():
-    """Create necessary folders for data organization"""
     dirs = [
         f"{WORK_DIR}/labels",
         f"{WORK_DIR}/dataset/train/images",
@@ -213,4 +211,5 @@ if __name__ == "__main__":
         # Show final model filename for quick reference
         print(f" Final model file: {os.path.basename(trained_model_path)}")
     else:
+
         print(" Model saving failed!")
